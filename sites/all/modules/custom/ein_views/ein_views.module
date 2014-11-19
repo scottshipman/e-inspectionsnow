@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the EIN Views feature.
+ */
+
+include_once 'ein_views.features.inc';

@@ -1,0 +1,10 @@
+name = EIN Blocks
+description = EIN Blocks
+core = 7.x
+package = EIN
+version = 7.x-1.0
+project = ein_blocks
+dependencies[] = fe_block
+dependencies[] = views
+features[fe_block_settings][] = views-inspection_reports-block
+features[features_api][] = api:1
