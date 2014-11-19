@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created by scottshipman
+ * Date: 11/19/14
+ * Time: 10:02 AM
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function ein_contrib_overrides_form_alter(&$form, &$form_state, $form_id) {
+  if(strpos($form_id, 'node_form') !==false){
+    // disable vertical tabs for this form
+    $form['additional_settings']['#access'] = FALSE;
+  }
+}
+

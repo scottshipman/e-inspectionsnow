@@ -1,0 +1,5 @@
+name = EIN Contrib Overrides
+description = custom enhancements to overrride or extend contrib modules.
+core = 7.x
+package = EIN
+
