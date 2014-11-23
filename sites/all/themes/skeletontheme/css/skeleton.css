@@ -273,3 +273,5 @@ a#logo img {
 .file a:before{
     content:"Download: ";
 }
+
+div.form-item-status, div.form-item-roles, #edit-metatags {display:none;}
