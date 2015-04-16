@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the EIN Global feature.
+ */
+
+include_once 'ein_global.features.inc';

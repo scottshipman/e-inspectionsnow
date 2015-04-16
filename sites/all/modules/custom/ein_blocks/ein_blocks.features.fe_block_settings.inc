@@ -10,122 +10,169 @@
 function ein_blocks_default_fe_block_settings() {
   $export = array();
 
-  // bartik
-  $theme = array();
+  $export['version'] = '2.0';
 
-  $theme['views-inspection_reports-block'] = array(
-    'module' => 'views',
+  $export['block-login_block'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'login_block',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(
+      'anonymous user' => 1,
+    ),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => 'header_right',
+        'status' => 1,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-my_profile'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'my_profile',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(
+      'authenticated user' => 2,
+    ),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => 'header_right',
+        'status' => 1,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-new_report'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'new_report',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(
+      'administrator' => 3,
+      'Inspector' => 4,
+    ),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => 'header_right',
+        'status' => 1,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-inspection_reports-block'] = array(
+    'cache' => -1,
+    'custom' => 0,
     'delta' => 'inspection_reports-block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
+    'module' => 'views',
+    'node_types' => array(),
     'pages' => 'manager*
 node/add*
 node/*/edit
 admin*',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
     'title' => '',
-    'cache' => -1,
+    'visibility' => 0,
   );
 
-  $export['bartik'] = $theme;
-
-  // corporateclean
-  $theme = array();
-
-  $theme['views-inspection_reports-block'] = array(
-    'module' => 'views',
-    'delta' => 'inspection_reports-block',
-    'theme' => 'corporateclean',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => 'manager*
-node/add*
-node/*/edit
-admin*',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['corporateclean'] = $theme;
-
-  // seven
-  $theme = array();
-
-  $theme['views-inspection_reports-block'] = array(
-    'module' => 'views',
-    'delta' => 'inspection_reports-block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => 'manager*
-node/add*
-node/*/edit
-admin*',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['seven'] = $theme;
-
-  // skeletontheme
-  $theme = array();
-
-  $theme['views-inspection_reports-block'] = array(
-    'module' => 'views',
-    'delta' => 'inspection_reports-block',
-    'theme' => 'skeletontheme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => 'manager*
-node/add*
-node/*/edit
-admin*',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['skeletontheme'] = $theme;
-
-  // thecompany
-  $theme = array();
-
-  $theme['views-inspection_reports-block'] = array(
-    'module' => 'views',
-    'delta' => 'inspection_reports-block',
-    'theme' => 'thecompany',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => 'manager*
-node/add*
-node/*/edit
-admin*',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['thecompany'] = $theme;
-
-  $theme_default = variable_get('theme_default', 'garland');
-  $themes = list_themes();
-  foreach ($export as $theme_key => $settings) {
-    if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
-      unset($export[$theme_key]);
-    }
-  }
   return $export;
 }
