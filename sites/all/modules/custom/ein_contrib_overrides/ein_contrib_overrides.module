@@ -10,14 +10,28 @@
  */
 function ein_contrib_overrides_form_alter(&$form, &$form_state, $form_id) {
 
-  if(strpos($form_id, 'node_form') !==false){
-    // disable vertical tabs for this form
-    $form['additional_settings']['#access'] = FALSE;
-  }
+    if(strpos($form_id, 'node_form') !==false){
+        // disable vertical tabs for this form
+        //$form['additional_settings']['#access'] = FALSE;
 
-  if($form_id == 'user_register_form'){
-    $form['account']['notify']['#default_value'] = TRUE;
-  }
+        $form['revision_information']['#access'] = FALSE;
+        $form['#after_build'][] = 'ein_contrib_overrides_after_build';
+        $form['comment_settings']['#access'] = FALSE;
+        $form['author']['#access'] = FALSE;
+        $form['translations']['#access'] = FALSE;
+        $form['options']['#access'] = FALSE;
+        $form['metatags']['#access'] = FALSE;
+    }
 
+    if($form_id == 'user_register_form'){
+        $form['account']['notify']['#default_value'] = TRUE;
+    }
+
+}
+
+function ein_contrib_overrides_after_build($form, &$form_state) {
+    $form['path']['#access'] = FALSE;
+    $form['menu']['#access'] = FALSE;
+    return ($form);
 }
 
