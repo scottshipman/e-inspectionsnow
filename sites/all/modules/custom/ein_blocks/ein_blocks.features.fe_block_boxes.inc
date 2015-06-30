@@ -23,7 +23,7 @@ function ein_blocks_default_fe_block_boxes() {
   $fe_block_boxes->info = 'My Profile Button';
   $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'my_profile';
-  $fe_block_boxes->body = '<p><a class="button" href="/user">My Profile</a></p>
+  $fe_block_boxes->body = '<p><a class="button" href="/user/logout">Logout</a>  <a class="button" href="/user">My Profile</a></p>
 ';
 
   $export['my_profile'] = $fe_block_boxes;

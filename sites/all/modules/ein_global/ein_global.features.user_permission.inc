@@ -15,6 +15,7 @@ function ein_global_user_default_permissions() {
     'name' => 'create inspection_report content',
     'roles' => array(
       'Inspector' => 'Inspector',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function ein_global_user_default_permissions() {
     'name' => 'delete any inspection_report content',
     'roles' => array(
       'Inspector' => 'Inspector',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -33,6 +35,7 @@ function ein_global_user_default_permissions() {
     'name' => 'delete own inspection_report content',
     'roles' => array(
       'Inspector' => 'Inspector',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -42,6 +45,7 @@ function ein_global_user_default_permissions() {
     'name' => 'edit any inspection_report content',
     'roles' => array(
       'Inspector' => 'Inspector',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -51,6 +55,7 @@ function ein_global_user_default_permissions() {
     'name' => 'edit own inspection_report content',
     'roles' => array(
       'Inspector' => 'Inspector',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
