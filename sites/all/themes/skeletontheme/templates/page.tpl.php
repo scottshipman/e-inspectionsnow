@@ -1,6 +1,6 @@
 <div id="wrap">
     <div class="container">
-        
+    <div class="header-wrapper">
         <?php if ($page['header_top_left'] || $page['header_top_right']): ?>
         <!-- #header-top -->
         <div id="header-top" class="sixteen columns clearfix">
@@ -35,8 +35,8 @@
             <div class="inner">
     
                 <?php if ($logo): ?>
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                  <a href="<?php print $front_page; ?>" title="<?php print t('e-InspectionsNow Building Inspection Services'); ?>" rel="home" id="logo">
+                    <img src="<?php print $logo; ?>" alt="<?php print t('e-InspectionsNow Building Inspection Services'); ?>" />
                   </a>
                 <?php endif; ?>
                 
@@ -93,6 +93,7 @@
             </div>
             
         </div><!-- /#navigation -->
+        </div>
              <?php if ($breadcrumb): ?>
                 <div id="breadcrumb"><?php print $breadcrumb; ?></div>
             <?php endif; ?>
@@ -207,13 +208,31 @@
                 <?php if ($page['footer']): print render($page['footer']); endif; ?>
                 
                 <div class="clear"></div>
-                
-                <div id="credits">
-                <?php print(date('Y') . ' ');?>
-                <?php if (!empty($site_name)):?>
-                Copyright &copy; <?php print $site_name ?>
-                <?php endif;?>
-                  |  Site provided by <a href="http://www.ibuilddrupalsites.com" target="_blank">I Build Drupal Sites.com</a>. </div>
+
+
+                <div class="footer-logos">
+                    <div class="logo-item">
+                        <img class="footer-logo-item" alt="Internachi Certified" src="/sites/all/themes/skeletontheme/images/internachi_certified_logo75.jpg" />
+                        <span class="logo-caption">#09073107</span>
+                    </div>
+                    <div class="logo-item">
+                        <img class="footer-logo-item" alt="Florida Certified" src="/sites/all/themes/skeletontheme/images/fl-seal75.jpg"  />
+                        <span class="logo-caption">Lic # HI-575</span>
+                    </div>
+                    <div class="logo-item">
+                        <img class="footer-logo-item" alt="Buyer's Choice" src="/sites/all/themes/skeletontheme/images/buyers-choice-logo75.jpg" />
+                    </div>
+
+                    <div id="credits">
+                        <?php print(date('Y') . ' ');?>
+                        <?php if (!empty($site_name)):?>
+                            Copyright &copy; <?php print $site_name ?>
+                        <?php endif;?>
+                        |  Site provided by <a href="http://www.ibuilddrupalsites.com" target="_blank">I Build Drupal Sites.com</a>.
+                    </div>
+                </div>
+
+
         	</div>
         </div>
     </div>

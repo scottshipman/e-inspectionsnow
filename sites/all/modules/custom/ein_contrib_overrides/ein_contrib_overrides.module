@@ -13,9 +13,8 @@ function ein_contrib_overrides_form_alter(&$form, &$form_state, $form_id) {
   if(strpos($form_id, 'node_form') !==false){
     // disable vertical tabs for this form
     //$form['additional_settings']['#access'] = FALSE;
-    
       $form['revision_information']['#access'] = FALSE;
-  $form['#after_build'][] = 'ein_contrib_overrides_after_build';
+  //$form['#after_build'][] = 'ein_contrib_overrides_after_build';
   $form['comment_settings']['#access'] = FALSE;
   $form['author']['#access'] = FALSE;
   $form['translations']['#access'] = FALSE;
