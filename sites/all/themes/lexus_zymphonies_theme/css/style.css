@@ -2043,6 +2043,10 @@ a.my-button:hover, a.text-button:hover {
     background: #3131aa;
 }
 
+div#top-area a:hover {
+    background: #3131aa;
+}
+
 .view-inspection-steps-home-owners td {
     vertical-align: top;
 }
