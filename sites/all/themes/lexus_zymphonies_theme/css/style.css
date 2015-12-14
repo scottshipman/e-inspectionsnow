@@ -1967,11 +1967,11 @@ div.logo-item {
     line-height: 7em;
 }
 
-a.button {
+/*a.button {
     font-size: .5em;
     background-color: #ca0101;
     padding: 10px;
-}
+}*/
 
 a.my-button {
     font-size: 1.5em;
@@ -2008,7 +2008,7 @@ a.my-button {
 
 }
 
-.file a:hover {
+.view-id-inspection_reports.view-display-id-block .file a:hover {
     background-color: #AAD20E;
 }
 
