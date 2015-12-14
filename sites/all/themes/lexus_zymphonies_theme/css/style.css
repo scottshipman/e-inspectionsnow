@@ -1967,11 +1967,12 @@ div.logo-item {
     line-height: 7em;
 }
 
-/*a.button {
+a.text-button {
     font-size: .5em;
     background-color: #ca0101;
     padding: 10px;
-}*/
+    text-decoration: none;
+}
 
 a.my-button {
     font-size: 1.5em;
@@ -2038,7 +2039,7 @@ a.my-button {
 }
 
 
-a.my-button:hover, a.button:hover {
+a.my-button:hover, a.text-button:hover {
     background: #3131aa;
 }
 
@@ -2137,4 +2138,7 @@ span.underline {
     text-align: center;
 }
 
+/* over ride nivo slider theme */
+.theme-bar .nivo-caption a {
+    border-bottom:none;
 }
