@@ -101,7 +101,7 @@
                 </div>
             <?php endif; ?>
 
-            <?php if (empty ($field_blog_image) && empty(!$field_blog_video)): ?>
+            <?php if (empty ($field_blog_image) && !empty($field_blog_video)): ?>
                 <div class = "tip-video">
                     <?php  print render($content['field_blog_video']); ?>
                 </div>
