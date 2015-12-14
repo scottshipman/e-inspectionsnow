@@ -626,6 +626,22 @@ div.logo-item {
     top:1px;
 }
 
+.step-title h3 {
+    float: left;
+    padding: 10px;
+}
+
+.step-detail img, .step-detail p{
+    float:left;
+    padding: 0px 10px 0px 10px;
+    margin-bottom:15px;
+
+}
+
+.step-clear {
+    float:none;
+    clear:both;
+}
 
 
 

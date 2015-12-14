@@ -18,8 +18,8 @@ function ein_contrib_overrides_form_alter(&$form, &$form_state, $form_id) {
   $form['comment_settings']['#access'] = FALSE;
   $form['author']['#access'] = FALSE;
   $form['translations']['#access'] = FALSE;
-  $form['options']['#access'] = FALSE;
-  $form['metatags']['#access'] = FALSE;
+  //$form['options']['#access'] = FALSE;
+  //$form['metatags']['#access'] = FALSE;
   }
 
   if($form_id == 'user_register_form'){
