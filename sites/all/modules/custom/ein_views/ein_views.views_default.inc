@@ -114,6 +114,7 @@ function ein_views_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
+    3 => '3',
     1 => '1',
     2 => '2',
   );
@@ -328,10 +329,66 @@ function ein_views_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'My Inspection Reports';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'input_required';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Get My Reports';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Get Report(s)';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
-  $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Please complete each field to collect your report(s)';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'field_inspection_report_type_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => 'false',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_street_number_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_buyer_last_name_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 1;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -448,7 +505,7 @@ function ein_views_views_default_views() {
   $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['operator'] = 'field_inspection_report_type_value_op';
   $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['identifier'] = 'field_inspection_report_type_value';
   $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => '1',
@@ -458,6 +515,27 @@ function ein_views_views_default_views() {
     6 => 0,
   );
   $handler->display->display_options['filters']['field_inspection_report_type_value']['expose']['reduce'] = TRUE;
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['label'] = 'Inspection Report Type';
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['identifier'] = 'field_inspection_report_type_value';
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['optional'] = FALSE;
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['default_group'] = '1';
+  $handler->display->display_options['filters']['field_inspection_report_type_value']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'Insurance',
+      'operator' => 'or',
+      'value' => array(
+        'Insurance ' => 'Insurance ',
+      ),
+    ),
+    2 => array(
+      'title' => 'Home Inspection',
+      'operator' => 'or',
+      'value' => array(
+        'Home Inspection ' => 'Home Inspection ',
+      ),
+    ),
+  );
   /* Filter criterion: Content: Street Number (field_street_number) */
   $handler->display->display_options['filters']['field_street_number_value']['id'] = 'field_street_number_value';
   $handler->display->display_options['filters']['field_street_number_value']['table'] = 'field_data_field_street_number';
@@ -468,7 +546,6 @@ function ein_views_views_default_views() {
   $handler->display->display_options['filters']['field_street_number_value']['expose']['operator'] = 'field_street_number_value_op';
   $handler->display->display_options['filters']['field_street_number_value']['expose']['identifier'] = 'field_street_number_value';
   $handler->display->display_options['filters']['field_street_number_value']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['field_street_number_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_street_number_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => '1',
@@ -487,7 +564,6 @@ function ein_views_views_default_views() {
   $handler->display->display_options['filters']['field_buyer_last_name_value']['expose']['operator'] = 'field_buyer_last_name_value_op';
   $handler->display->display_options['filters']['field_buyer_last_name_value']['expose']['identifier'] = 'field_buyer_last_name_value';
   $handler->display->display_options['filters']['field_buyer_last_name_value']['expose']['required'] = TRUE;
-  $handler->display->display_options['filters']['field_buyer_last_name_value']['expose']['remember'] = TRUE;
   $handler->display->display_options['filters']['field_buyer_last_name_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => '1',

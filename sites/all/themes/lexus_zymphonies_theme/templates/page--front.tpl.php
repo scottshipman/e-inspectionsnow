@@ -79,7 +79,7 @@
             </h1>
         </div>
         <?php print render($page['search']) ?>
-        <?php print render($page['user_menu']) ?>
+
         <!-- Social Links -->
 
         <?php if (theme_get_setting('social_links')): ?>
@@ -97,6 +97,7 @@
         <?php endif; ?>
         <!-- End Social Links -->
         <?php print render($page['contact_no']) ?>
+        <?php print render($page['user_menu']) ?>
 
     </header>
 </div>

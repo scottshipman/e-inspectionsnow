@@ -2030,7 +2030,7 @@ a.my-button {
 
 .views-field.views-field-field-buyer-last-name .field-content {
     font-weight: 600;
-    border-bottom: 1px dotted darkgrey;
+
 }
 
 .views-field.views-field-field-city span {
@@ -2067,6 +2067,14 @@ div#top-area a:hover {
     top: -24px;
 }
 
+div.views-field-field-inspection-date {
+    margin-top:1.5em;
+}
+
+div.views-field-field-city {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted darkgrey;
+}
 
 
 /* Tips slide show styles */
@@ -2145,4 +2153,22 @@ span.underline {
 /* over ride nivo slider theme */
 .theme-bar .nivo-caption a {
     border-bottom:none;
+}
+
+/* style the header Established date text */
+.region-user-menu {
+    text-align: center;
+    float: left;
+    position: relative;
+    min-width: 50%;
+}
+
+.region-user-menu p {
+    font-size: 1.9em;
+    font-style: oblique;
+    margin-top: 1.3em;
+}
+
+#edit-submit-inspection-reports {
+    margin-left: 1em;
 }

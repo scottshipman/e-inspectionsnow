@@ -50,6 +50,44 @@ function ein_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-cities_served'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'cities_served',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => 'cities-served',
+    'roles' => array(),
+    'themes' => array(
+      'lexus_zymphonies_theme' => array(
+        'region' => 'testimonials',
+        'status' => 1,
+        'theme' => 'lexus_zymphonies_theme',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   $export['block-copywrite'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -98,7 +136,7 @@ function ein_blocks_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'lexus_zymphonies_theme' => array(
-        'region' => 'contact_no',
+        'region' => 'search',
         'status' => 1,
         'theme' => 'lexus_zymphonies_theme',
         'weight' => -22,
@@ -410,7 +448,7 @@ function ein_blocks_default_fe_block_settings() {
         'region' => 'search',
         'status' => 1,
         'theme' => 'lexus_zymphonies_theme',
-        'weight' => -21,
+        'weight' => -23,
       ),
       'seven' => array(
         'region' => '',
@@ -856,6 +894,44 @@ function ein_blocks_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['block-tagline'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'tagline',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'lexus_zymphonies_theme' => array(
+        'region' => 'user_menu',
+        'status' => 1,
+        'theme' => 'lexus_zymphonies_theme',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'skeletontheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'skeletontheme',
+        'weight' => 0,
+      ),
+      'thecompany' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'thecompany',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['devel-execute_php'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -1211,7 +1287,7 @@ function ein_blocks_default_fe_block_settings() {
         'region' => 'search',
         'status' => 1,
         'theme' => 'lexus_zymphonies_theme',
-        'weight' => -22,
+        'weight' => -21,
       ),
       'seven' => array(
         'region' => 'help',

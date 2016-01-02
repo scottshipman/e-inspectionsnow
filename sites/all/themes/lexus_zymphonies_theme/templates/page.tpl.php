@@ -79,7 +79,7 @@
       </h1>
     </div>
     <?php print render($page['search']) ?>
-    <?php print render($page['user_menu']) ?>
+
       <!-- Social Links -->
 
       <?php if (theme_get_setting('social_links')): ?>
@@ -97,6 +97,7 @@
       <?php endif; ?>
       <!-- End Social Links -->
     <?php print render($page['contact_no']) ?>
+      <?php print render($page['user_menu']) ?>
   </header>
 </div>
 
@@ -258,3 +259,38 @@
   </div>
 
 </div>
+
+<?php if (isset($page['content']['views_inspection_reports-block'])): ?>
+
+    <script>
+        var filterXHR = null;
+        jQuery(document).ajaxSend(function (event, jqXHR, settings) {
+            filterXHR = jqXHR; // cache XHR object for current ajax request
+        });
+
+
+        jQuery( document ).ready(function($) {
+            prepareFilter();
+
+
+            $('#block-views-inspection-reports-block').bind('DOMSubtreeModified', function () {
+                prepareFilter();
+
+            });
+        });
+
+        function prepareFilter() {
+            if ( jQuery( "#standardsbox" ).length == 0 ) {
+                jQuery('#edit-submit-inspection-reports').before("<input id='standardsbox' type='checkbox' name='standards-practice' value='i-agree'> I have read and agree to the <a target='_blank' href='standards-practice' id='standards'>standards of practice</a>");
+                jQuery('#edit-submit-inspection-reports').attr('disabled', 'disabled');
+            }
+            jQuery('#standardsbox').change(function(){
+                if (jQuery('#standardsbox').prop('checked')) {
+                    jQuery('#edit-submit-inspection-reports').removeAttr('disabled');
+                } else {
+                    jQuery('#edit-submit-inspection-reports').attr('disabled','disabled');
+                }
+            });
+        }
+    </script>
+<?php endif; ?>

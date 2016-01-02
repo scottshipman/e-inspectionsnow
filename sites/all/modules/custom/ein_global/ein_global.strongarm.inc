@@ -541,44 +541,15 @@ function ein_global_strongarm() {
   $strongarm->name = 'nivo_slider_banner_settings';
   $strongarm->value = array(
     0 => array(
-      'weight' => '-10',
-      'published' => 0,
-      'delete' => 0,
-      'fid' => '75',
-      'title' => 'Keys for Homeowners',
-      'description' => array(
-        'value' => 'This is the description',
-        'format' => 'plain_text',
-      ),
-      'url' => '/homeowners',
-      'visibility' => '<front>',
-      'transition' => '',
-    ),
-    1 => array(
       'weight' => '-9',
-      'published' => 0,
-      'delete' => 0,
-      'fid' => '79',
-      'title' => 'Serving Pinellas, Tampa and Pasco County',
-      'description' => array(
-        'value' => 'Where are we',
-        'format' => 'plain_text',
-      ),
-      'url' => 'services',
-      'visibility' => '<front>',
-      'transition' => '',
-    ),
-    2 => array(
-      'weight' => '-8',
       'published' => 1,
       'delete' => 0,
-      'fid' => '77',
-      'title' => 'Inspection Services',
+      'fid' => '110',
+      'title' => 'Inspection Services by certified inspectors',
       'description' => array(
-        'value' => '<p>Our inspectors are Florida licensed and&nbsp;adhere&nbsp;to<br />
-Florida Comprehensive Standards and Practice.&nbsp;</p>
+        'value' => '<p>The most trusted inspection company in the Tampa Bay area.&nbsp;</p>
 
-<p><a class="button" href="services">Learn More</a></p>
+<p><a class="text-button" href="services">Learn More</a></p>
 ',
         'format' => 'full_html',
       ),
@@ -586,8 +557,36 @@ Florida Comprehensive Standards and Practice.&nbsp;</p>
       'visibility' => '<front>',
       'transition' => '',
     ),
+    1 => array(
+      'weight' => '-8',
+      'published' => 1,
+      'delete' => 0,
+      'fid' => '87',
+      'title' => 'Home Inspection Report',
+      'description' => array(
+        'value' => '',
+        'format' => 'plain_text',
+      ),
+      'url' => '',
+      'visibility' => 'my-reports',
+      'transition' => '',
+    ),
+    2 => array(
+      'weight' => '-7',
+      'published' => 1,
+      'delete' => 0,
+      'fid' => '97',
+      'title' => 'Tips for homeowners',
+      'description' => array(
+        'value' => '',
+        'format' => 'plain_text',
+      ),
+      'url' => '',
+      'visibility' => 'homeowner-tips/*',
+      'transition' => '',
+    ),
     3 => array(
-      'weight' => '1',
+      'weight' => '-6',
       'published' => 1,
       'delete' => 0,
       'fid' => '83',
@@ -601,49 +600,7 @@ Florida Comprehensive Standards and Practice.&nbsp;</p>
       'transition' => '',
     ),
     4 => array(
-      'weight' => '1',
-      'published' => 1,
-      'delete' => 0,
-      'fid' => '85',
-      'title' => 'Home Buyers',
-      'description' => array(
-        'value' => '',
-        'format' => 'plain_text',
-      ),
-      'url' => '',
-      'visibility' => 'home-buyers',
-      'transition' => '',
-    ),
-    5 => array(
-      'weight' => '1',
-      'published' => 1,
-      'delete' => 0,
-      'fid' => '87',
-      'title' => 'Home Inspection Report',
-      'description' => array(
-        'value' => '',
-        'format' => 'plain_text',
-      ),
-      'url' => '',
-      'visibility' => 'my-reports',
-      'transition' => '',
-    ),
-    6 => array(
-      'weight' => '1',
-      'published' => 1,
-      'delete' => 0,
-      'fid' => '81',
-      'title' => 'Schedule an Inspection',
-      'description' => array(
-        'value' => '',
-        'format' => 'plain_text',
-      ),
-      'url' => '',
-      'visibility' => 'schedule-inspection',
-      'transition' => '',
-    ),
-    7 => array(
-      'weight' => '1',
+      'weight' => '-5',
       'published' => 1,
       'delete' => 0,
       'fid' => '91',
@@ -656,18 +613,46 @@ Florida Comprehensive Standards and Practice.&nbsp;</p>
       'visibility' => 'services',
       'transition' => '',
     ),
-    8 => array(
-      'weight' => '1',
+    5 => array(
+      'weight' => '-4',
       'published' => 1,
       'delete' => 0,
-      'fid' => '97',
-      'title' => 'Tips for homeowners',
+      'fid' => '81',
+      'title' => 'Schedule an Inspection',
       'description' => array(
         'value' => '',
         'format' => 'plain_text',
       ),
       'url' => '',
-      'visibility' => 'homeowner-tips/*',
+      'visibility' => 'schedule-inspection',
+      'transition' => '',
+    ),
+    6 => array(
+      'weight' => '-3',
+      'published' => 1,
+      'delete' => 0,
+      'fid' => '85',
+      'title' => 'Home Buyers',
+      'description' => array(
+        'value' => '',
+        'format' => 'plain_text',
+      ),
+      'url' => '',
+      'visibility' => 'home-buyers',
+      'transition' => '',
+    ),
+    7 => array(
+      'weight' => '1',
+      'published' => 1,
+      'delete' => 0,
+      'fid' => '112',
+      'title' => 'Providing inspection services in Tampa Bay since 1991',
+      'description' => array(
+        'value' => '',
+        'format' => 'plain_text',
+      ),
+      'url' => '',
+      'visibility' => 'cities-served',
       'transition' => '',
     ),
   );
@@ -712,7 +697,7 @@ Florida Comprehensive Standards and Practice.&nbsp;</p>
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nivo_slider_effect';
-  $strongarm->value = 'random';
+  $strongarm->value = 'fade';
   $export['nivo_slider_effect'] = $strongarm;
 
   $strongarm = new stdClass();

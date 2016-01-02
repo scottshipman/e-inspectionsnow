@@ -32,14 +32,22 @@ function ein_blocks_default_fe_block_boxes() {
   $export['association_logos'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Cities Served';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'cities_served';
+  $fe_block_boxes->body = '<h1>Since 1991, E Inspections Now, Inc has been serving the Tampa Bay area, and beyond.<br />
+Below is a list of cities we serve across Florida.</h1>
+';
+
+  $export['cities_served'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Copywrite';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'copywrite';
-  $fe_block_boxes->body = '
-<div class="full-wrap clearfix" id="copyright">
-<div class="copyright">© <?php echo date("Y"); ?> <?php print $site_name; ?>. All Rights Reserved.</div>
+  $fe_block_boxes->body = '<div class="full-wrap clearfix" id="copyright">
+<div class="copyright">© &nbsp;All Rights Reserved.</div>
 </div>
-
 ';
 
   $export['copywrite'] = $fe_block_boxes;
@@ -68,7 +76,7 @@ function ein_blocks_default_fe_block_boxes() {
   $fe_block_boxes->machine_name = 'home_intro';
   $fe_block_boxes->body = '<h1>e-InspectionsNow&nbsp;Building Inspection Services</h1>
 
-<p>Your home or building is one of your biggest investments.&nbsp; An inspection helps to assure that your investment is both a sensible and pleasant experience.&nbsp; Being informed and knowledgeable about the condition of your new home or building eases the anxiety associated with purchasing a property.</p>
+<p>Your home or building is one of your biggest investments.&nbsp; An inspection helps to assure that your investment is both a sensible and pleasant experience.&nbsp; Being informed and knowledgeable about the condition of your new home or building eases the anxiety associated with purchasing a property. We provide a detailed inspection by certified and licensed inspectors and will convey deficiencies in the property in layman\'s terms.</p>
 ';
 
   $export['home_intro'] = $fe_block_boxes;
@@ -79,16 +87,16 @@ function ein_blocks_default_fe_block_boxes() {
   $fe_block_boxes->machine_name = 'home_second_bottom';
   $fe_block_boxes->body = '<h3 style="line-height: 20.8px;">The purpose?</h3>
 
-<p style="line-height: 20.8px;">An inspection must be done so that you are informed of any major defect or problems with the property before you finalize the purchase. The inspection or the report is not a warranty or guarantee.</p>
+<p style="line-height: 20.8px;">An inspection must be done so that you are informed of any major defect or problems with the property before you finalize the purchase. The inspection or the report is not a warranty or guarantee. The inspection will give you an overall view of the conditions of the property so you can make an educated decision if this is the right purchase for you.</p>
 
 <h3>How is it done?</h3>
 
 <p style="line-height: 20.8px;">The inspector carefully examines the structure and systems of the home or building by inspecting readily accessible areas and making visual observations of the property’s condition at the time of the inspection. No destructive, damaging or invasive inspection is made.<br />
-When the inspector finishes, you will get a computer presentation with digital photos and have an opportunity to ask about the operation and maintenance of the home. The inspection will take about two to three hours.</p>
+When the inspector finishes, you will get a computer presentation with digital photos and have an opportunity to ask about the operation and maintenance of the home. The inspection will take about one hour per 1000 square feet depending on amenities and age of the property.</p>
 
 <h3>Price?</h3>
 
-<p style="line-height: 20.8px;">This is based on the age, and the amount of air-conditioned square footage.</p>
+<p style="line-height: 20.8px;">This is based on the age, and the amount of total square footage.</p>
 ';
 
   $export['home_second_bottom'] = $fe_block_boxes;
@@ -97,10 +105,10 @@ When the inspector finishes, you will get a computer presentation with digital p
   $fe_block_boxes->info = 'HomeBuyer testimonial';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'homebuyer_testimonial';
-  $fe_block_boxes->body = '<h1>BECAUSE YOU WANT IT DONE RIGHT !!!!&nbsp;&nbsp;&nbsp;</h1>
+  $fe_block_boxes->body = '<h1>BECAUSE YOU WANT IT DONE RIGHT !</h1>
 
-<p>You want to hire the most experienced, educated, and detail oriented inspector who can properly convey the condition of the home or structure.&nbsp; Experience is priceless.&nbsp;</p>
-';
+You want to hire the most experienced, certified, educated, and detail oriented inspector who can properly convey the condition of the home or structure.&nbsp;<br />
+<h3>Experience is priceless.&nbsp;</h3>';
 
   $export['homebuyer_testimonial'] = $fe_block_boxes;
 
@@ -136,9 +144,9 @@ When the inspector finishes, you will get a computer presentation with digital p
 
 <h2>Tips for Homebuyers</h2>
 
-<p>some words about things<br />
-home buyers might want<br />
-to know.</p>
+<p>Once you own the property,<br />
+you will want to maintain it.<br />
+Here are some tips to help.</p>
 
 <p><a href="/homeowner-tips/latest">View Now</a></p>
 ';
@@ -178,12 +186,12 @@ to know.</p>
   $fe_block_boxes->machine_name = 'realestate_bottom_left';
   $fe_block_boxes->body = '<h2><span style="color:#FF0000;">PROVIDING SERVICE TO THE TAMPA BAY AREA SINCE 1991</span></h2>
 
-<p>The reason realtors use&nbsp;E inspections Now, inc is&nbsp;to&nbsp;eliminate&nbsp;their&nbsp;liability&nbsp;on the condition of the&nbsp;home.&nbsp;E inspections Now, inc maintains a special relationship with their agents and customers -&nbsp; &nbsp;We are here to stay.&nbsp;&nbsp;<strong>&nbsp; &nbsp;</strong></p>
+<p>The reason realtors use&nbsp;E Inspections Now, Inc is&nbsp;to&nbsp;eliminate&nbsp;their&nbsp;liability&nbsp;on the deficiencies of the&nbsp;home.&nbsp;E Inspections Now, Inc maintains a special relationship with their agents and customers -&nbsp; &nbsp;We are here to stay, building long term relationships.&nbsp;&nbsp;<strong>&nbsp; &nbsp;</strong></p>
 
-<p>We provide a realistic overview of the home, pointing out deficiencies as they are uncovered.&nbsp;&nbsp; Results are presented in a realist prospective, and we have real solutions for the buyer concerns.&nbsp;&nbsp;E Inspections Now, inc never misrepresents&nbsp;the condition of the properly, or&nbsp;flooding or leaks.</p>
+<p>We provide a realistic overview of the home, pointing out deficiencies and highlighting improvements, upgrades and&nbsp;quality construction.&nbsp;&nbsp; Results are presented in a meaningful and instructive manner, prioritized for the buyer concerns.&nbsp;&nbsp;E Inspections Now, Inc brings years of experience to provide you with an accurate assessment of the customer\'s new home.</p>
 
-<p>We have&nbsp;been in business this long&nbsp;because of&nbsp;our inspection process, training&nbsp;and attention to details.</p>
-';
+We have&nbsp;been in business this long&nbsp;because of&nbsp;our inspection process, training&nbsp;and attention to details.<br />
+<h3>Experience is priceless.</h3>';
 
   $export['realestate_bottom_left'] = $fe_block_boxes;
 
@@ -194,16 +202,19 @@ to know.</p>
   $fe_block_boxes->body = '<h2><span style="color:#FF0000;">OUR&nbsp;SERVCES:&nbsp;</span></h2>
 
 <ul>
-	<li>Residential&nbsp;inspections</li>
-	<li>Commercial&nbsp;buildings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-	<li>Mobile homes</li>
-	<li>New construction</li>
-	<li>Uniform wind mitigation inspections</li>
-	<li>Four point&nbsp;inspections</li>
-	<li>Certification inspections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+	<li>Residential&nbsp;inspections&nbsp;</li>
+	<li>Condominium inspections</li>
+	<li>Commercial building inspections</li>
+	<li>Pre- sale listing inspections</li>
+	<li>Home maintenance inspection-SA</li>
+	<li>Mobile home inspections</li>
+	<li>New Construction inspection (in three phases)</li>
+	<li>Uniform Mitigation verification inspection</li>
+	<li>Four Point inspections</li>
+	<li>Roof certification inspection&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 </ul>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; While business is good and growing steadily, it is important for you to know that we are never too busy to help those you refer to us.&nbsp;</p>
+<p>We appreciate your referrals. Thank you for your continued support.</p>
 ';
 
   $export['realestate_bottom_right'] = $fe_block_boxes;
@@ -213,7 +224,7 @@ to know.</p>
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'realestate_testimonial';
   $fe_block_boxes->body = '<h1>Established in 1991, we are one of the oldest<br />
-and most trusted inspections companies in the Tampa Bay area.</h1>
+and most trusted inspection&nbsp;companies in the Tampa Bay area.</h1>
 ';
 
   $export['realestate_testimonial'] = $fe_block_boxes;
@@ -228,7 +239,9 @@ and most trusted inspections companies in the Tampa Bay area.</h1>
 
 <p>We have been around<br />
 since 1991, in the Pinellas,<br />
-Hillsborough and Pasco area..</p>
+Hillsborough and Pasco area.</p>
+
+<p><a href="cities-served">See Full City List</a></p>
 ';
 
   $export['right_block'] = $fe_block_boxes;
@@ -249,13 +262,16 @@ Hillsborough and Pasco area..</p>
   $fe_block_boxes->body = '<h1><span style="color:#FF0000;">We Specialize in:</span></h1>
 
 <ul>
-	<li>Residential</li>
-	<li>Commercial buildings</li>
-	<li>Mobile homes</li>
-	<li>New construction</li>
-	<li>Uniform wind mitigation inspections</li>
-	<li>Four point inspections</li>
-	<li>Roof certification inspections</li>
+	<li>Residential&nbsp;inspections&nbsp;</li>
+	<li>Condominium inspections</li>
+	<li>Commercial building inspections</li>
+	<li>Pre- sale listing inspections</li>
+	<li>Home maintenance inspection-SA</li>
+	<li>Mobile home inspections</li>
+	<li>New Construction inspection (in three phases)</li>
+	<li>Uniform Mitigation verification inspection</li>
+	<li>Four Point inspections</li>
+	<li>Roof certification inspection</li>
 </ul>
 
 <p>&nbsp;</p>
@@ -300,6 +316,15 @@ Experience &amp; Skills</span></h1>
 ';
 
   $export['services_quote'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Established in 1991';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'tagline';
+  $fe_block_boxes->body = '<span class="headerAddress"><address>Established in 1991</address></span>
+';
+
+  $export['tagline'] = $fe_block_boxes;
 
   return $export;
 }
