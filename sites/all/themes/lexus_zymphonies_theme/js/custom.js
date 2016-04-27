@@ -10,6 +10,18 @@
 
 -----------------------------------------------*/
 
+(function($) {
+    Drupal.behaviors.myBehavior = {
+        attach: function (context, settings) {
+
+            //code starts
+            $('.file a').attr('target', '_blank');
+            //code ends
+
+        }
+    };
+})(jQuery);
+
 jQuery(document).ready(function($) {
   
   $('.social-icons li').each(function(){
