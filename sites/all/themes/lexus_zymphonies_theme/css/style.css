@@ -1505,7 +1505,8 @@ ol.search-results {
 
 #top-area .column {
   float: left;
-  width: 33.3%;
+  width: 25%;
+  /* width: 33.3%; */
   padding: 2%;
   text-align: center;
   background: #f00000 /* 00aff0 */;
@@ -1972,6 +1973,13 @@ a.text-button {
     background-color: #ca0101;
     padding: 10px;
     text-decoration: none;
+}
+
+a.text-button-large {
+  font-size: 1em;
+  background-color: #ca0101;
+  padding: 10px;
+  text-decoration: none;
 }
 
 a.my-button {

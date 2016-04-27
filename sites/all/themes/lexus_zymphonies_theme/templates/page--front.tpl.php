@@ -138,21 +138,24 @@
                 <?php if ($page['top_third']): ?>
                     <div class="column three"><?php print render($page['top_third']); ?></div>
                 <?php endif; ?>
-            </div>
-        <?php endif; ?>
-        <?php if ($page['top_forth'] || $page['top_fifth'] || $page['top_sixth']): ?>
-            <div class="page-wrap clearfix">
                 <?php if ($page['top_forth']): ?>
                     <div class="column four"><?php print render($page['top_forth']); ?></div>
                 <?php endif; ?>
-                <?php if ($page['top_fifth']): ?>
-                    <div class="column five"><?php print render($page['top_fifth']); ?></div>
-                <?php endif; ?>
-                <?php if ($page['top_sixth']): ?>
-                    <div class="column six"><?php print render($page['top_sixth']); ?></div>
-                <?php endif; ?>
             </div>
         <?php endif; ?>
+<!--        --><?php //if ($page['top_forth'] || $page['top_fifth'] || $page['top_sixth']): ?>
+<!--            <div class="page-wrap clearfix">-->
+<!--                --><?php //if ($page['top_forth']): ?>
+<!--                    <div class="column four">--><?php //print render($page['top_forth']); ?><!--</div>-->
+<!--                --><?php //endif; ?>
+<!--                --><?php //if ($page['top_fifth']): ?>
+<!--                    <div class="column five">--><?php //print render($page['top_fifth']); ?><!--</div>-->
+<!--                --><?php //endif; ?>
+<!--                --><?php //if ($page['top_sixth']): ?>
+<!--                    <div class="column six">--><?php //print render($page['top_sixth']); ?><!--</div>-->
+<!--                --><?php //endif; ?>
+<!--            </div>-->
+<!--        --><?php //endif; ?>
     <?php endif; ?>
 </div>
 
